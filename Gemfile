@@ -59,7 +59,7 @@ end
 gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
 
 gem 'pry-rails'
-gem 'devise'
+gem 'devise' # Sorry Moser ;)
 gem 'haml-rails'
 gem 'pundit'
 gem 'rack-mini-profiler'
