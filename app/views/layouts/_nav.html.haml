@@ -1,0 +1,28 @@
+%nav.navbar.navbar-light.bg-light.navbar-expand-md
+  = link_to image_tag('https://teamairship.com/wp-content/uploads/2016/07/airship-logo.svg', width: "35"), "/", class: "navbar-brand"
+
+  %button.navbar-toggler{"aria-controls" => "navbar-toggle-content", "aria-expanded" => "false", "aria-label" => "Toggle navigation", "data-target" => "#navbar-toggle-content", "data-toggle" => "collapse", :type => "button"}
+    %span.navbar-toggler-icon
+
+  .collapse.navbar-collapse#navbar-toggle-content.justify-content-end
+    %ul.navbar-nav
+      .dropdown-divider
+      %li.nav-item
+        = link_to posts_path, class: "nav-link" do
+          Posts
+      - if current_user
+        .dropdown-divider
+        %li.nav-item
+          = link_to(dashboard_path, class: "nav-link") do
+            Dashboard
+        .dropdown-divider
+        %li.nav-item
+          = link_to(destroy_user_session_path, class: "nav-link", method: :delete) do
+            Logout
+
+      - else
+        .dropdown-divider
+        %li.nav-item
+          = link_to(new_user_session_path, class: "nav-link") do
+            Login
+

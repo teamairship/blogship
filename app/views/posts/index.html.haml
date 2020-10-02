@@ -1,0 +1,20 @@
+%center
+  %h2.mb-3 Welcome to the Airship Blog!
+
+%table.table
+  %thead
+    %tr
+      %th Title
+      %th Content
+      %th author
+      %th{:colspan => "2"}
+  %tbody
+    - @posts.each do |post|
+      %tr
+        %td= link_to post.title, post
+        %td= post.content
+        %td= post.user
+        %td= link_to 'Edit', edit_post_path(post)
+        %td= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' }
+%br/
+= link_to 'New Post', new_post_path, class: "btn btn-outline-primary"
