@@ -11,6 +11,7 @@ This application uses Rails 6.
 
 * rvm install ruby-2.6.3 (or your ruby version manager of choice)
 * bundle install
+* yarn install
 * rake db:create
 * rake db:migrate
 * rake db:seed

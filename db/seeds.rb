@@ -10,6 +10,7 @@
 
 admin = User.find_or_initialize_by(email: 'admin@teamairship.com', first_name: 'Admin', last_name: 'McTesterson')
 admin.password = admin.password_confirmation = 'password'
+admin.role = 'admin'
 admin.save
 
 user = User.find_or_initialize_by(email: 'user@teamairship.com', first_name: 'Author', last_name: 'McBlogger')

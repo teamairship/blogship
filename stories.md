@@ -25,7 +25,7 @@ Currently, anyone can see the create/update/destroy links for posts.
 
 Update the view logic to only show links to those who have access to that action.
 
-Guests (not logged-in) should be able to view a post, bu not be able to see create/update/destroy links for a post.
+Guests (not logged-in) should be able to view a post, but not be able to see create/update/destroy links for a post.
 Logged-in users should be able to create new posts and see links to update/destroy their own posts.
 Admins should be able to see everything.
 

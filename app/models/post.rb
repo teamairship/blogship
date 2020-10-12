@@ -9,7 +9,7 @@ class Post < ApplicationRecord
   scope :published, -> { where.not(published_date: nil).where('published_date <= ?', Time.now) }
 
   def published?
-    published_date <= Time.now
+    published_date.present? && published_date <= Time.now
   end
 
 end
