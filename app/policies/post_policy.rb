@@ -30,7 +30,6 @@ class PostPolicy < ApplicationPolicy
     %i[
       title
       content
-      status
     ]
   end
 
